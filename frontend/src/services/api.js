@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://finance-dashboard-1-0zqx.onrender.com' || 'http://localhost:5000/api',
+  baseURL: 'https://finance-dashboard-1-0zqx.onrender.com/api' || 'http://localhost:5000/api',
 });
 
 api.interceptors.request.use(
