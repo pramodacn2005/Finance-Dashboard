@@ -17,7 +17,10 @@ connectDB();
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: process.env.FRONTEND_URL || 'https://finance-dashboard-68ig.vercel.app',
+  credentials: true
+}));
 app.use(express.json());
 
 if (process.env.NODE_ENV === 'development') {
